@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+ 	
+ 	<!-- Addtional Styling-->
+ 	<link rel="stylesheet" href="custom-style.css">
+ 	
+ 
+  </head>
+  <body>
+  	
+  	<nav class="navbar navbar-inverse fixed-top bg-inverse">
+      <a class="navbar-brand" href="#">curtiskreidler.com</a>
+    </nav>
+    
+    <div class="container-fluid fresh-color">
+    	<div class="jumbotron jumbotron-fluid site-title">
+    		<h1 id="title-name">SECURE WEB DEVELOPMENT:~$ </h1>
+    	</div>
+    </div>
+    
+    <div class="container extra-padding-top">
+    	<h2>Text-Twist</h2>
+    	<img class="screenshot" src="assets/ttwist.png">
+    	<p class="extra-padding-top"><b>Description</b>: This project is a clone of the popular online flash game called "Text-Twist". 
+    	This project was done with a LAMP stack.</p>
+    </div>
+    
+    <div class="container extra-padding-top">
+    	<h2>Text-Twist Security Audit</h2>
+    	<img id="audit1" class="screenshot" src="assets/audit1.png">
+    	<p class="extra-padding-top"><b>Description</b>: This is my team's audit of another students
+    	Text-Twist project</p>
+    </div>
+    
+    <div class="container extra-padding-top">
+    	<h2>Basic Fourm</h2>
+    	<img class="screenshot" src="assets/bforum.png">
+    	<p class="extra-padding-top"><b>Description</b>: This project is a Basic Forum that has Oauth and Firebase integration </p>
+    </div>
+    
+    <div class="container extra-padding-top">
+    	<h2>Basic Fourm Security Audit</h2>
+    	<img class="screenshot" src="assets/audit2.png">
+    	<p class="extra-padding-top"><b>Description</b>: This is my team's audit of another students Basic Forum Project</p>
+    </div>
+   
+	<div class="container-fluid comment-section extra-padding-top"> 
+	
+	  <div class="container">
+	    <h2>COMMENT SECTION</h2>
+	      <div class="list-group" id="comments" >
+	      
+	     </div>
+	   </div>
+	  
+		<h2 class="extra-padding-top">Sign in to post a comment</h2>
+		<button class="btn btn-primary" onClick="authenticateGit()">Sign-In with Git</button>
+		<button class="btn btn-primary" onClick="authenticateGoogle()">Sign-In with Google</button>
+	
+		<div class="container">
+			<form action="javascript:addComment()">
+				<div class="form-group">
+					<label for="comment-data"></label>
+					<textarea class="form-control" id="commentData" name="comment-data" maxlength="5000" rows="3" onchange="this.value = this.value.replace(/[^\w\s.!?,;]+/g, '')" required></textarea>
+				</div>
+				<div class="form-group">
+					<input id="post-button"class="btn btn-danger" type="submit" value="post comment"/>
+				</div>
+			</form>
+			<button class="link btn btn-warning" onClick="logout()">logout</button>
+		</div>
+	
+	
+	
+	</div>
+
+    <!-- Firebase, jQuery first, then Tether, then Bootstrap JS. -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyB8E12Yl7QGztRNwvmS4tpvirAzF73O_jA",
+          authDomain: "vanitycomments.firebaseapp.com",
+          databaseURL: "https://vanitycomments.firebaseio.com",
+          projectId: "vanitycomments",
+          storageBucket: "vanitycomments.appspot.com",
+          messagingSenderId: "817227485145"
+        };
+    	firebase.initializeApp(config);
+    	</script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  	<script src="script.js"></script>
+  </body>
+</html>
