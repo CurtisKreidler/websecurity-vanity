@@ -1,34 +1,8 @@
 //variables
 var commentRef = firebase.database().ref("/Comments");
-var provider1 = new firebase.auth.GithubAuthProvider();
 var provider2 = new firebase.auth.GoogleAuthProvider();
 var UserToken = null;
 
-
-//functions
-function authenticateGit(){
-    firebase.auth().signInWithPopup(provider1).then(function(result) {
-    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-        UserToken = user;
-    
-    }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    
-    console.log(error.message);
-  
-    
-        // return null;
-    });
-}//authenticate function git
 
 
 function authenticateGoogle(){
@@ -114,8 +88,6 @@ function addComment(){
     document.getElementById("commentData").value  = "";
     
     var ProfilePic;
-    
-    
     
     
     if(UserToken == null){
